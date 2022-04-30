@@ -11,6 +11,10 @@ body
     color: white;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+body a:hover
+{
+    text-decoration: underline;
+}
 header
 {
     display: flex;
@@ -59,6 +63,7 @@ main
     flex-flow: column nowrap;
     align-items: center;
     text-align: center;
+    margin-bottom: 40px;
 }
 main div.logo
 {
@@ -83,6 +88,12 @@ main div.search
     background-color: var(--bg-color);
     border-radius: 40px;
     border: 1px solid rgb(96, 96, 96);
+    color: white;
+}
+.search input:hover
+{
+    background-color: rgb(49, 48, 56);
+    border-color: rgb(49, 48, 56);
 }
 .search .links
 {
@@ -98,7 +109,12 @@ main div.search
     font-weight: 600;
     text-decoration: none;
     padding: 7px 16px;
-    background-color: rgb(57, 57, 57);
+    background-color: rgb(49, 48, 56);
+    border: 1px solid rgb(49, 48, 56);
+}
+.search .links a:hover
+{
+    border-color: rgb(96, 96, 96);
 }
 .search .offered-in
 {
@@ -111,7 +127,49 @@ main div.search
     color: rgb(110, 156, 255);
     text-decoration: none;
 }
+.search .offered-in a:hover
+{
+    text-decoration: underline;
+}
 
+/*Footer*/
+
+footer
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    width: 100%;
+    flex-flow: column nowrap;
+    background-color: rgb(23, 23, 23);
+}
+footer div.region{
+    color: rgb(183, 183, 183);
+    border-bottom: 1px solid rgb(34, 34, 34);
+    padding: 15px 30px;
+}
+footer div.links
+{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+footer .links div
+{
+    display: flex;
+    text-align: center;
+}
+footer div a{
+    color: rgb(183, 183, 183);
+    text-decoration: none;
+    padding: 14px;
+    font-size: 15px;
+}
+footer div a:hover
+{
+    text-decoration: underline;
+}
 /*Breakpoints*/
 
 @media(min-width: 624px)
@@ -119,5 +177,22 @@ main div.search
     .search input
     {
         width: 585px;
+    }
+}
+@media(min-width: 664px)
+{
+    footer div.links
+    {
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+    }
+}
+@media(min-width: 1200px)
+{
+    footer div.links
+    {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 1px 16px;
     }
 }
